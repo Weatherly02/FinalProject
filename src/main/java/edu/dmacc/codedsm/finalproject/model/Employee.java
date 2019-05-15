@@ -64,9 +64,10 @@ public class Employee {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", rate=" + rate +
+                ", hoursWorked=" + hoursWorked +
+               // ", grossPay=" + grossPay +
+             //   ", netPay=" + netPay +
                 '}';
-
-
     }
 
 }

@@ -5,6 +5,10 @@ import edu.dmacc.codedsm.finalproject.controller.EmployeeControllerImpl;
 import edu.dmacc.codedsm.finalproject.model.Employee;
 import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 import java.util.Scanner;
 
@@ -27,12 +31,34 @@ public class MenuView implements View {
             if (response.equals("4")) {
                 isRunning = false;
             } else if (response.equals("3")) {
-                employeeController.processPayroll();
+                // employeeController.processPayroll();
                 isRunning = false;
             } else if (response.equals("2")) {
                 //employeeController.updateEmployeeHours();
             } else if (response.equals("1"))
                 allEmployeeView.render(employees);
+        }
+        File file = new File("payroll_results.txt");
+
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
+
+        PrintWriter pw = null;
+        try {
+            pw = new PrintWriter("payroll_results.txt");
+        } catch (FileNotFoundException e1) {
+            e1.printStackTrace();
+        }
+        pw.println("This is my file content");
+        //(Integer employeeId, String name, Double netPay);
+        pw.close();
+        System.out.println("DONE");
     }
+}
+
+

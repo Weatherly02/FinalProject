@@ -9,8 +9,7 @@ public class DataLoadController {
     private DataLoadService dataLoadService;
     private EmployeeRepository repository;
 
-
-    public void load(){
+    public void load() {
         dataLoadService = new DataLoadService(repository);
 
         try {

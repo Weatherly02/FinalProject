@@ -1,12 +1,21 @@
-package edu.dmacc.codedsm.finalproject;
+package edu.dmacc.codedsm.finalproject.model;
 
 public class Employee {
 
-        private Integer id;
+    private Integer id;
     private String name;
     private double rate;
     private Integer hoursWorked;
     private double grossPay;
+    private double netPay;
+
+    public double getNetPay() {
+        return netPay;
+    }
+
+    public void setNetPay(double netPay) {
+        this.netPay = netPay;
+    }
 
     public Integer getId() {
         return id;

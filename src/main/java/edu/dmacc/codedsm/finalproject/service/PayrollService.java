@@ -1,9 +1,11 @@
 package edu.dmacc.codedsm.finalproject.service;
 
-public interface PayrollService {
-    void calculatePayroll();
+import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 
-    //define the methods at a highlevel
+public interface PayrollService {
+    void processPayroll(EmployeeRepository employees);
+
+    void savePayrollToFile(EmployeeRepository employees);
 
 }
 

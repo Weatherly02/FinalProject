@@ -1,10 +1,10 @@
 package edu.dmacc.codedsm.finalproject.controller;
 
-import edu.dmacc.codedsm.finalproject.service.PayrollService;
+import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 
 public interface PayrollController {
+    void processPayroll(EmployeeRepository employees);
 
-    public void processPayroll();
-
+    void savePayrollToFile(EmployeeRepository employees);
 
 }

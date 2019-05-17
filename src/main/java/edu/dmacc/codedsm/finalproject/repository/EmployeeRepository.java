@@ -5,11 +5,12 @@ import edu.dmacc.codedsm.finalproject.model.Employee;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class EmployeeRepository implements Repository {
 
-    private HashMap<String, Employee> employees = new HashMap<>();
+    private Map<String, Employee> employees = new HashMap<>();
 
     public List<Employee> getAllEmployees() {
         List<Employee> employeeList = new ArrayList<>();
@@ -17,7 +18,7 @@ public class EmployeeRepository implements Repository {
         return employeeList;
     }
 
-    public Employee getEmployeeById(Integer id) {
+    public Employee getEmployeeById(String id) {
         Employee employee = employees.get(id);
         return employee;
     }

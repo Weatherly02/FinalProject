@@ -2,20 +2,18 @@ package edu.dmacc.codedsm.finalproject.view;
 
 import edu.dmacc.codedsm.finalproject.controller.EmployeeController;
 import edu.dmacc.codedsm.finalproject.controller.EmployeeControllerImpl;
+import edu.dmacc.codedsm.finalproject.controller.PayrollController;
+import edu.dmacc.codedsm.finalproject.controller.PayrollControllerImpl;
 import edu.dmacc.codedsm.finalproject.model.Employee;
 import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 import java.util.Scanner;
 
 public class MenuView implements View {
 
     public void render(EmployeeRepository employees) {
         EmployeeController employeeController = new EmployeeControllerImpl(employees);
+        PayrollController payrollController = new PayrollControllerImpl();
         AllEmployeeView allEmployeeView = new AllEmployeeView();
         Boolean isRunning = true;
         Scanner in = new Scanner(System.in);
@@ -31,33 +29,26 @@ public class MenuView implements View {
             if (response.equals("4")) {
                 isRunning = false;
             } else if (response.equals("3")) {
-                // employeeController.processPayroll();
+                payrollController.processPayroll(employees);
+                payrollController.savePayrollToFile(employees);
                 isRunning = false;
             } else if (response.equals("2")) {
-                //employeeController.updateEmployeeHours();
+                System.out.print("Employee ID: ");
+                String empId = in.next();
+                Employee e = employeeController.getEmployee(empId);
+                System.out.println("");
+                if (e == null) {
+                    System.out.println("Employee not found");
+                } else {
+                    System.out.print("Employee hours: ");
+                    String empHours = in.next();
+                    e.setHoursWorked(Integer.parseInt(empHours));
+                    employeeController.updateEmployee(e);
+                    System.out.println("");
+                }
             } else if (response.equals("1"))
                 allEmployeeView.render(employees);
         }
-        File file = new File("payroll_results.txt");
-
-        if (!file.exists()) {
-            try {
-                file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-        PrintWriter pw = null;
-        try {
-            pw = new PrintWriter("payroll_results.txt");
-        } catch (FileNotFoundException e1) {
-            e1.printStackTrace();
-        }
-        pw.println("This is my file content");
-        //(Integer employeeId, String name, Double netPay);
-        pw.close();
-        System.out.println("DONE");
     }
 }
 

@@ -1,1 +1,10 @@
-This is my file content
+Employee{id=1, name='Bob Camden', rate=15.0, hoursWorked=20}
+Employee{id=2, name='Jill Thomas', rate=11.5, hoursWorked=0}
+Employee{id=3, name='Mary Green', rate=22.75, hoursWorked=0}
+Employee{id=4, name='Gus O'Toole', rate=18.25, hoursWorked=0}
+Employee{id=5, name='Manuel Cortez', rate=11.5, hoursWorked=0}
+Employee{id=6, name='Jim Thompson', rate=15.0, hoursWorked=0}
+Employee{id=7, name='Carrie Swetson', rate=23.25, hoursWorked=0}
+Employee{id=8, name='Jack Donaldson', rate=36.5, hoursWorked=0}
+Employee{id=9, name='Doris Van Huesen', rate=50.75, hoursWorked=0}
+Employee{id=10, name='Elliot Ness', rate=42.0, hoursWorked=0}

@@ -10,10 +10,10 @@ public class PayrollControllerImpl implements PayrollController {
     @Override
     public void processPayroll(EmployeeRepository employees) {
         payrollService.processPayroll(employees);
+        savePayrollToFile(employees);
     }
 
-    @Override
-    public void savePayrollToFile(EmployeeRepository employees) {
+    private void savePayrollToFile(EmployeeRepository employees) {
         payrollService.savePayrollToFile(employees);
     }
 };

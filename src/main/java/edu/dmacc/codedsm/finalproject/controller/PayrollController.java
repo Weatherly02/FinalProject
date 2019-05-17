@@ -5,6 +5,5 @@ import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 public interface PayrollController {
     void processPayroll(EmployeeRepository employees);
 
-    void savePayrollToFile(EmployeeRepository employees);
 
 }

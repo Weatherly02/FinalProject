@@ -12,13 +12,13 @@ public class EmployeeRepository implements Repository {
 
     private Map<String, Employee> employees = new HashMap<>();
 
-    public List<Employee> getAllEmployees() {
+    public List<Employee> getAll() {
         List<Employee> employeeList = new ArrayList<>();
         employeeList = employees.values().stream().collect(Collectors.toList());
         return employeeList;
     }
 
-    public Employee getEmployeeById(String id) {
+    public Employee getById(String id) {
         Employee employee = employees.get(id);
         return employee;
     }

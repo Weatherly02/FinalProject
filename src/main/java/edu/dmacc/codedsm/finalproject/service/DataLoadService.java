@@ -9,14 +9,14 @@ import java.io.IOException;
 
 public class DataLoadService {
     private EmployeeRepository repository;
-    private EmployeeService employeeService;
+    private EmployeeServiceImpl employeeServiceImpl;
 
-    public DataLoadService(EmployeeRepository repository) {
+    public DataLoadService (EmployeeRepository repository) {
         this.repository = repository;
     }
 
     public void loadData() throws IOException {
-        employeeService = new EmployeeService(this.repository);
+        employeeServiceImpl = new EmployeeServiceImpl(this.repository);
 
         String filePath = "initial_load.txt";
         String line;
@@ -28,7 +28,7 @@ public class DataLoadService {
             if (!((line = reader.readLine()) != null)) break;
             Employee employee = createEmployee(line);
             System.out.println("Employee ID: "+employee.getId()+ " Employee Name: "+employee.getName()+ " Employee Rate: "+employee.getRate() + " Employee Hours Worked: "+employee.getHoursWorked());
-            employeeService.save(employee);
+            employeeServiceImpl.save(employee);
         }
 
         reader.close();

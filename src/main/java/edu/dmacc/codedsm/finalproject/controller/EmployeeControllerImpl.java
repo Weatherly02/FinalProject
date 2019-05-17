@@ -26,6 +26,7 @@ public class EmployeeControllerImpl implements EmployeeController {
 
     @Override
     public void updateEmployee(Employee emp) {
+        //employeeRepository.getEmployeeById(emp.getId().toString()).setHoursWorked(emp.getHoursWorked());
         employeeRepository.getEmployeeById(emp.getId().toString()).setHoursWorked(emp.getHoursWorked());
     }
 }

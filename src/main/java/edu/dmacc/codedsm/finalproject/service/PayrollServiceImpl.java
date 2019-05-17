@@ -1,6 +1,8 @@
 package edu.dmacc.codedsm.finalproject.service;
 
+import edu.dmacc.codedsm.finalproject.model.Employee;
 import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -13,7 +15,7 @@ public class PayrollServiceImpl implements PayrollService {
 
     @Override
     public void processPayroll(EmployeeRepository employees) {
-        employees.getAllEmployees().forEach(employee -> System.out.println("For employee " + employee.getId() + ", payroll = " + employee.getRate() * employee.getHoursWorked() / 1.2));
+        employees.getAllEmployees().forEach(employee -> System.out.println("Employee ID: " + employee.getId() + " Name: " + employee.getName() + " Net pay:  $" + employee.getRate() * employee.getHoursWorked() / 1.2));
     }
 
     @Override
@@ -30,7 +32,8 @@ public class PayrollServiceImpl implements PayrollService {
 
         try {
             PrintWriter pw = new PrintWriter("payroll_results.txt");
-            employees.getAllEmployees().forEach(employee -> pw.println(employee));
+            employees.getAllEmployees().forEach(employee -> pw.println("Employee ID: " + employee.getId() + " Name: " + employee.getName() + " Net pay:  $" + employee.getRate() * employee.getHoursWorked() / 1.2));
+            //employees.getAllEmployees().forEach(employee -> pw.println(employee));
             pw.close();
         } catch (FileNotFoundException e1) {
             e1.printStackTrace();

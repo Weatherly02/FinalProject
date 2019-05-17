@@ -48,6 +48,8 @@ public class MenuView implements View {
                 }
             } else if (response.equals("1"))
                 allEmployeeView.render(employees);
+            else
+                System.out.println("Please enter 1, 2, 3, or 4.");
         }
     }
 }

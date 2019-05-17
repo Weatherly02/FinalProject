@@ -4,5 +4,5 @@ import edu.dmacc.codedsm.finalproject.model.Employee;
 
 public interface Repository {
     void save (Employee data);
-    
+
 }

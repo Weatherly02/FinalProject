@@ -1,6 +1,5 @@
 package edu.dmacc.codedsm.finalproject.service;
 
-import edu.dmacc.codedsm.finalproject.model.Employee;
 import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 
 import java.io.File;
@@ -32,8 +31,7 @@ public class PayrollServiceImpl implements PayrollService {
 
         try {
             PrintWriter pw = new PrintWriter("payroll_results.txt");
-            employees.getAllEmployees().forEach(employee -> pw.println("Employee ID: " + employee.getId() + " Name: " + employee.getName() + " Net pay:  $" + employee.getRate() * employee.getHoursWorked() / 1.2));
-            //employees.getAllEmployees().forEach(employee -> pw.println(employee));
+            employees.getAllEmployees().forEach(employee -> pw.println("Employee ID: " + employee.getId() + "\t\t" + " Name: " + employee.getName() + "\t\t\t\t" + " Net pay:  $" + employee.getRate() * employee.getHoursWorked() / 1.2));
             pw.close();
         } catch (FileNotFoundException e1) {
             e1.printStackTrace();

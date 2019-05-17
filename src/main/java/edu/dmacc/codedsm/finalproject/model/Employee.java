@@ -6,16 +6,6 @@ public class Employee {
     private String name;
     private double rate;
     private Integer hoursWorked;
-    private double grossPay;
-    private double netPay;
-
-    public double getNetPay() {
-        return netPay;
-    }
-
-    public void setNetPay(double netPay) {
-        this.netPay = netPay;
-    }
 
     public Integer getId() {
         return id;
@@ -49,14 +39,6 @@ public class Employee {
         this.hoursWorked = hoursWorked;
     }
 
-    public double getGrossPay() {
-        return grossPay;
-    }
-
-    public void setGrossPay(double grossPay) {
-        this.grossPay = grossPay;
-
-    }
 
     @Override
     public String toString() {
@@ -65,8 +47,6 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", rate=" + rate +
                 ", hoursWorked=" + hoursWorked +
-               // ", grossPay=" + grossPay +
-             //   ", netPay=" + netPay +
                 '}';
     }
 

@@ -27,7 +27,7 @@ public class DataLoadService {
         while (true) {
             if (!((line = reader.readLine()) != null)) break;
             Employee employee = createEmployee(line);
-            System.out.println("Employee ID="+employee.getId()+ ", Employee Name="+employee.getName()+ ", Employee Rate="+employee.getRate() + ", Employee Hours Worked="+employee.getHoursWorked());
+            System.out.println("Employee ID: "+employee.getId()+ " Employee Name: "+employee.getName()+ " Employee Rate: "+employee.getRate() + " Employee Hours Worked: "+employee.getHoursWorked());
             employeeService.save(employee);
         }
 

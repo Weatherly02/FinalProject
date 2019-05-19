@@ -5,7 +5,7 @@ import edu.dmacc.codedsm.finalproject.model.Employee;
 import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 import edu.dmacc.codedsm.finalproject.service.EmployeeService;
 import edu.dmacc.codedsm.finalproject.service.EmployeeServiceImpl;
-import edu.dmacc.codedsm.finalproject.view.AllEmployeeView;
+import edu.dmacc.codedsm.finalproject.view.allEmployeeView;
 
 import java.util.Scanner;
 
@@ -53,7 +53,7 @@ public class Runner {
                     System.out.println("");
                 }
             } else if (response.equals("1")) {
-                AllEmployeeView allView = employeeController.getAll();
+                allEmployeeView allView = employeeController.getAll();
                 allView.render();
             }
             else

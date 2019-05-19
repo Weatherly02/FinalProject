@@ -9,8 +9,13 @@ public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeRepository employeeRepository;
 
 
-    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository)
+    {
         this.employeeRepository = employeeRepository;
+    }
+
+    public EmployeeServiceImpl() {
+
     }
 
     public void save(Employee employee) {

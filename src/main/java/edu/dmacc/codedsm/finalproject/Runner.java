@@ -10,18 +10,17 @@ import edu.dmacc.codedsm.finalproject.view.AllEmployeeView;
 import java.util.Scanner;
 
 public class Runner {
+
+
     public static void main(String[] args) {
-        EmployeeRepository repository= new EmployeeRepository(); // should only have one repository
-        EmployeeService service= new EmployeeServiceImpl(repository); // should only have one repository
+        EmployeeRepository repository= new EmployeeRepository();
+        EmployeeService service= new EmployeeServiceImpl(repository);
         EmployeeController employeeController = new EmployeeControllerImpl(service);
-        PayrollController payrollController = new PayrollControllerImpl();
+        PayrollController payrollController = new PayrollControllerImpl(repository);
         DataLoadController dataLoadController = new DataLoadControllerImpl(repository);
         dataLoadController.load();
 
         System.out.println(repository);
-
-        //MenuView view = new MenuView();
-        //view.render(repository);
 
         boolean isRunning = true;
         Scanner in = new Scanner(System.in);
@@ -37,7 +36,7 @@ public class Runner {
             if (response.equals("4")) {
                 isRunning = false;
             } else if (response.equals("3")) {
-                payrollController.processPayroll(repository);
+                payrollController.processPayroll();
                 isRunning = false;
             } else if (response.equals("2")) {
                 System.out.print("Employee ID: ");
@@ -62,4 +61,3 @@ public class Runner {
         }
     }
 }
-

@@ -1,10 +1,10 @@
-Employee ID: 1		 Name: Bob Camden Net pay:  $250.0
-Employee ID: 2		 Name: Jill Thomas Net pay:  $287.5
-Employee ID: 3		 Name: Mary Green Net pay:  $0.0
-Employee ID: 4		 Name: Gus O'Toole Net pay:  $0.0
+Employee ID: 1		 Name: Bob Camden Net pay:  $312.5
+Employee ID: 2		 Name: Jill Thomas Net pay:  $9.583333333333334
+Employee ID: 3		 Name: Mary Green Net pay:  $758.3333333333334
+Employee ID: 4		 Name: Gus O'Toole Net pay:  $608.3333333333334
 Employee ID: 5		 Name: Manuel Cortez Net pay:  $0.0
-Employee ID: 6		 Name: Jim Thompson Net pay:  $0.0
-Employee ID: 7		 Name: Carrie Swetson Net pay:  $0.0
-Employee ID: 8		 Name: Jack Donaldson Net pay:  $760.4166666666667
-Employee ID: 9		 Name: Doris Van Huesen Net pay:  $0.0
+Employee ID: 6		 Name: Jim Thompson Net pay:  $500.0
+Employee ID: 7		 Name: Carrie Swetson Net pay:  $775.0
+Employee ID: 8		 Name: Jack Donaldson Net pay:  $1216.6666666666667
+Employee ID: 9		 Name: Doris Van Huesen Net pay:  $845.8333333333334
 Employee ID: 10		 Name: Elliot Ness Net pay:  $0.0

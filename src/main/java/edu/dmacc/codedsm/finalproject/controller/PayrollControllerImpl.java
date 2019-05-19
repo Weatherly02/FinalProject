@@ -1,8 +1,6 @@
 package edu.dmacc.codedsm.finalproject.controller;
 
 import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
-import edu.dmacc.codedsm.finalproject.service.EmployeeService;
-import edu.dmacc.codedsm.finalproject.service.EmployeeServiceImpl;
 import edu.dmacc.codedsm.finalproject.service.PayrollService;
 import edu.dmacc.codedsm.finalproject.service.PayrollServiceImpl;
 
@@ -25,7 +23,6 @@ public class PayrollControllerImpl implements PayrollController {
         private void savePayrollToFile(EmployeeRepository employees) {
             payrollService.savePayrollToFile(employees);
         }
-
 
     };
 

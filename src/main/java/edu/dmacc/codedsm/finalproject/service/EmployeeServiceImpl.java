@@ -14,9 +14,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         this.employeeRepository = employeeRepository;
     }
 
-    public EmployeeServiceImpl() {
+    //public EmployeeServiceImpl() {
 
-    }
+   // }
 
     public void save(Employee employee) {
         this.employeeRepository.save(employee);

@@ -34,7 +34,7 @@ public class DataLoadService {
         reader.close();
     }
 
-    private Employee createEmployee(String line) {
+    Employee createEmployee(String line) {
         Employee employee = new Employee();
 
         String[] splitEmployeeLine = line.split(",");
